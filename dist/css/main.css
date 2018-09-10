@@ -1,0 +1,137 @@
+/* 0. Reset ================================= */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* 1. Main Layout ================================= */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: #1d1d1f;
+}
+
+/* 2. Content ================================= */
+.home {
+	font-family: 'Shadows Into Light Two', cursive;
+	padding: 5% 5%;
+}
+
+.home .logo {
+	width: 30%;
+	height: auto;
+	left: 35%;
+	top: 25%;
+	margin: 0 35% 5%;
+}
+
+.home .columns-sect {
+	display: flex;
+	width: 100%;
+	height: 65vh;
+	border: 5px solid black;
+}
+
+.home .columns-sect div {
+	border: 5px solid black;
+	width: 33.3333%;
+}
+
+.home .columns-sect div h1 {
+	font-size: 9vw;
+	text-align: center;
+	margin-top: 30%;
+	font-weight: bold;
+	text-shadow: 1px 1px 1px #5C5C5C;
+}
+
+.home .columns-sect div ul {
+	opacity: 0;
+}
+
+.home .columns-sect .that-col {
+	background: #5f33f4;
+	transition: .5s;
+}
+
+.home .columns-sect .that-col:hover {
+	background: #9173ff;
+	transition: .5s;
+}
+
+.home .columns-sect .nataly-col {
+	background: #27b4c9;
+	transition: .5s;
+}
+
+.home .columns-sect .nataly-col:hover {
+	background: #00ffff;
+	transition: .5s;
+}
+
+.home .columns-sect .nataly-col img {
+	width: 30%;
+}
+
+.home .columns-sect .girl-col {
+	background: #f44191;
+	transition: .5s;
+}
+
+.home .columns-sect .girl-col:hover {
+	background: #ff6ae8;
+	transition: .5s;
+}
+
+/*# sourceMappingURL=main.css.map */
