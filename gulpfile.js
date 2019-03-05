@@ -123,19 +123,11 @@ gulp.task('start-browsersync', function() {
 
 
 gulp.task('welcome', () => {
-	console.log(colors.red('Starting Circus Starter template gulpfile! Wizz, whirrrrr, bang, pop!'));
+	console.log(colors.red('Begin!'));
 })
 
 gulp.task('make-cool-shit', () => {
 	setTimeout(() => {
-		console.log(' ');
-		console.log(' ================================================ '.red);
-		console.log('  Welcome to the Circus Starter template.         '.blue.bold);
-		console.log('  You\'re good to go.                              '.blue.bold);
-		console.log('  Make cool 💩.                                     '.blue.bold);
-		console.log('                                - Chris Silich    '.blue.dim);
-		console.log(' ================================================ '.red);
-		console.log(' ');
 	}, 500)
 })
 

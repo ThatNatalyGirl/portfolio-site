@@ -8,121 +8,118 @@
 }
 
 body{
-	background: #1d1d1f;	
+	background: #fff;
+	font-family: 'Architects Daughter', cursive;
+	width: 100%;
+	height: 100vh;	
+}
+
+a{
+	text-decoration: none;
+	color: #000;
 }
 
 /* 2. Content ================================= */
-.home{
-	font-family: 'Shadows Into Light Two', cursive;
-	padding: 5% 5%;
+
+header{
+	display: flex;
+	flex-direction: column;
+	margin: 5%;
 
 	.logo{
-		// position: absolute;
-		width: 30%;
-		height: auto;
-		left: 35%;
-		top: 25%;
-		margin: 0 35% 5%;
-		transition: .5s;
-
-		&:hover{
-			transform: scale(2) rotate(360deg) translateY(40%);
-			transition: .5s;
+		width: 40%;	
+		height: 40%;
+		margin-left: 30%;
+		transition: 1s;
+			
+		img{
+			width: 100%;	
+			height: 100%;
 		}
 	}
 
-	.columns-sect{
-		display: flex;
+	nav{
 		width: 100%;
-		// height: 150vh;
-		border: 5px solid black;
+		
+		ul{
+			display: flex;
+			justify-content: space-around;
+			margin-top: 5.5%;
 
-		// @media screen and (min-width: 620px){}
-
-		div{
-			border: 5px solid black;
-			width: 33.3333%;
-			
-			h1{
-				font-size: 9vw;
-				text-align: center;
-				margin-top: 30%;
-				font-weight: bold;
-				text-shadow: 1px 1px 1px #5C5C5C; 
-			}
-
-			ul{
-				opacity: 0;
-				margin: 50px 10%;
-				text-align: center;
-
-				p{
-					font-size: 1.4em;
-					line-height: 1.4em;
-					margin-bottom: 50px;
-				}
-
-				li{
-					margin-bottom: 30px;
-
-					h2{
-						margin-bottom: 5px;
-						font-size: 1.9em;
+			li{ 
+				a{
+					padding: 10%;
+					border-radius: 10%;
+					transition: .5s;
+					font-size: 1.3em;
+					
+					&:hover{
+						background: #d7dada;
 					}
-
-					a{
-						img{
-							width: 100%;
-							height: auto;
-							border: 5px solid #000;
-							filter: grayscale(1);
-							transition: .75s;
-							transform: scale(0.8);
-
-							&:hover{
-								filter: grayscale(0);
-								transition: .75s;
-								cursor: pointer;
-								transform: scale(1)
-
-							}
-						}
-					}	
-				}
+				}	
 			}
 		}
+	}
+}
 
-		.that-col{
-			background: #5f33f4;
-			transition: .5s;
-
-			&:hover{
-				background: #9173ff;
-				transition: .5s;
-			}		
+@media screen and (min-width: 768px){
+	header{
+		display: flex;
+		flex-direction: row;
+	
+		.logo{
+			width: 20%;
+			margin-left: 0%;
+			transition: 1s;
 		}
-
-		.nataly-col{
-			background: #27b4c9;
-			transition: .5s;
-
-			&:hover{
-				background: #00ffff;
-				transition: .5s;
-			}
+	
+		nav{
+			width: 100%;
 		}
+	}
+}
 
-		.girl-col{
-			background: #f44191;
+footer{
+	
+	ul{
+		display: flex;
+		margin: 0 30%;
+
+		li img{
+			width: 90%;
 			transition: .5s;
 
 			&:hover{
-				background: #ff6ae8;
+				filter: invert(.8);
 				transition: .5s;
 			}
 		}
 	}
 }
 
+//HOME PAGE
 
+.home{
+	ul{
+		display: flex;
 
+		li{
+			.frame{
+				position: absolute;
+				width: 30%;
+				// left: 2%;
+				// margin-top: 8%;
+			}
+
+			.frame-pic{
+				margin: 15% 0 80% 27%;
+				width: 35%;
+			}
+
+			.frame1{
+				.frame-pic{ 
+				}
+			}
+		}
+	}	
+}

@@ -59,113 +59,99 @@ table {
 }
 
 body {
-	background: #1d1d1f;
+	background: #fff;
+	font-family: 'Architects Daughter', cursive;
+	width: 100%;
+	height: 100vh;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
 }
 
 /* 2. Content ================================= */
-.home {
-	font-family: 'Shadows Into Light Two', cursive;
-	padding: 5% 5%;
-}
-
-.home .logo {
-	width: 30%;
-	height: auto;
-	left: 35%;
-	top: 25%;
-	margin: 0 35% 5%;
-	transition: .5s;
-}
-
-.home .logo:hover {
-	transform: scale(2) rotate(360deg) translateY(40%);
-	transition: .5s;
-}
-
-.home .columns-sect {
+header {
 	display: flex;
+	flex-direction: column;
+	margin: 5%;
+}
+
+header .logo {
+	width: 40%;
+	height: 40%;
+	margin-left: 30%;
+	transition: 1s;
+}
+
+header .logo img {
 	width: 100%;
-	border: 5px solid black;
+	height: 100%;
 }
 
-.home .columns-sect div {
-	border: 5px solid black;
-	width: 33.3333%;
-}
-
-.home .columns-sect div h1 {
-	font-size: 9vw;
-	text-align: center;
-	margin-top: 30%;
-	font-weight: bold;
-	text-shadow: 1px 1px 1px #5C5C5C;
-}
-
-.home .columns-sect div ul {
-	opacity: 0;
-	margin: 50px 10%;
-	text-align: center;
-}
-
-.home .columns-sect div ul p {
-	font-size: 1.4em;
-	line-height: 1.4em;
-	margin-bottom: 50px;
-}
-
-.home .columns-sect div ul li {
-	margin-bottom: 30px;
-}
-
-.home .columns-sect div ul li h2 {
-	margin-bottom: 5px;
-	font-size: 1.9em;
-}
-
-.home .columns-sect div ul li a img {
+header nav {
 	width: 100%;
-	height: auto;
-	border: 5px solid #000;
-	filter: grayscale(1);
-	transition: .75s;
-	transform: scale(0.8);
 }
 
-.home .columns-sect div ul li a img:hover {
-	filter: grayscale(0);
-	transition: .75s;
-	cursor: pointer;
-	transform: scale(1);
+header nav ul {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 5.5%;
 }
 
-.home .columns-sect .that-col {
-	background: #5f33f4;
+header nav ul li a {
+	padding: 10%;
+	border-radius: 10%;
+	transition: .5s;
+	font-size: 1.3em;
+}
+
+header nav ul li a:hover {
+	background: #d7dada;
+}
+
+@media screen and (min-width: 768px) {
+	header {
+		display: flex;
+		flex-direction: row;
+	}
+	header .logo {
+		width: 20%;
+		margin-left: 0%;
+		transition: 1s;
+	}
+	header nav {
+		width: 100%;
+	}
+}
+
+footer ul {
+	display: flex;
+	margin: 0 30%;
+}
+
+footer ul li img {
+	width: 90%;
 	transition: .5s;
 }
 
-.home .columns-sect .that-col:hover {
-	background: #9173ff;
+footer ul li img:hover {
+	filter: invert(0.8);
 	transition: .5s;
 }
 
-.home .columns-sect .nataly-col {
-	background: #27b4c9;
-	transition: .5s;
+.home ul {
+	display: flex;
 }
 
-.home .columns-sect .nataly-col:hover {
-	background: #00ffff;
-	transition: .5s;
+.home ul li .frame {
+	position: absolute;
+	width: 30%;
 }
 
-.home .columns-sect .girl-col {
-	background: #f44191;
-	transition: .5s;
-}
-
-.home .columns-sect .girl-col:hover {
-	background: #ff6ae8;
-	transition: .5s;
+.home ul li .frame-pic {
+	margin: 15% 0 80% 27%;
+	width: 35%;
 }
 
 /*# sourceMappingURL=main.css.map */
