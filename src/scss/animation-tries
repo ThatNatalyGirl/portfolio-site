@@ -1,0 +1,94 @@
+animation trials
+
+// .work{
+		// height: 100%;
+		// overflow: hidden;
+		// ul{
+			// height: 80%;
+
+			// // animation: ani-project 25s linear infinite;
+			
+			// &:hover{
+			// 	animation-play-state: paused;
+			// }
+
+			// li{
+			// 	// position: absolute;
+			// 	// animation: ani-projects 25s linear infinite;
+				
+			// 	&:hover{
+			// 		animation-play-state: paused;
+			// 	}
+				
+			// 	a{
+			// 		img{
+			// 			width: 40%;
+			// 		}
+			// 	}
+			// }
+
+			// .project1{
+			// 	top: 0%;
+				
+			// }
+			// .project2{
+			// 	top: 30%;
+			// 	left: 50%;
+			// 	a{
+			// 		img{
+			// 			width: 80%;
+			// 		}
+			// 	}			
+			// }
+			// .project3{
+			// 	top: 33%;
+			// 	right: 50%;
+			// 	a{
+			// 		img{
+			// 			width: 80%;
+			// 		}
+			// 	}
+			// }
+			// .project4{
+			// 	top: 67%;
+				
+			// }
+		// }
+	// }
+
+
+    @keyframes ani-project{
+	0%{
+		transform: rotate(0deg)
+	}
+	25%{
+		transform: rotate(90deg)
+	}
+	50%{
+		transform: rotate(180deg)
+	}
+	75%{
+		transform: rotate(270deg)	
+	}
+	100%{
+		transform: rotate(360deg)
+	}
+}
+
+@keyframes ani-projects{
+	0%{
+		transform: rotate(-0deg)
+	}
+	25%{
+		transform: rotate(-90deg)
+	}
+	50%{
+		transform: rotate(-180deg)
+	}
+	75%{
+		transform: rotate(-270deg)	
+	}
+	100%{
+		transform: rotate(-360deg)
+	}
+}
