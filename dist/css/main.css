@@ -207,8 +207,12 @@ footer ul {
 	margin: 0 30%;
 }
 
+footer ul li {
+	text-align: center;
+}
+
 footer ul li img {
-	width: 90%;
+	width: 50%;
 	transition: .5s;
 }
 

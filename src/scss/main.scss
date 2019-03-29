@@ -198,13 +198,17 @@ footer{
 		display: flex;
 		margin: 0 30%;
 
-		li img{
-			width: 90%;
-			transition: .5s;
-
-			&:hover{
-				filter: invert(.8);
+		li{    
+			text-align: center;
+			
+			img{
+				width: 50%;
 				transition: .5s;
+				
+				&:hover{
+					filter: invert(.8);
+					transition: .5s;
+				}
 			}
 		}
 	}
