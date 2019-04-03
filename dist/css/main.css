@@ -127,10 +127,16 @@ header nav ul li a:hover {
 	}
 }
 
+.home .home-nav {
+	background: rgba(97, 126, 229, 0.3);
+	text-decoration: underline;
+}
+
 .home h2 {
 	text-align: center;
 	font-size: 3em;
 	color: #617ee5;
+	margin: 5% 0;
 }
 
 .home h2 .logo-inline {
@@ -142,9 +148,35 @@ header nav ul li a:hover {
 	justify-content: space-around;
 }
 
+.home ul li {
+	text-align: center;
+}
+
+.home ul li h3 {
+	color: transparent;
+	transition: 1s;
+}
+
 .home ul li .bubble-pic {
-	width: 60%;
+	width: 90%;
 	transition: .5s;
+}
+
+.home ul li .bubble-resume {
+	filter: sepia() hue-rotate(95deg);
+	transition: .5s;
+}
+
+.home ul li:hover h3 {
+	color: #617ee5;
+}
+
+.home ul li:hover .bubble-pic {
+	filter: grayscale(1);
+}
+
+.home ul li:hover .bubble-resume {
+	filter: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -152,15 +184,24 @@ header nav ul li a:hover {
 		display: flex;
 	}
 	.home ul li .bubble-pic {
-		width: 40%;
+		width: 60%;
 	}
+}
+
+.work .work-nav {
+	background: rgba(97, 126, 229, 0.3);
+	text-decoration: underline;
 }
 
 .work .intro {
 	text-align: center;
 }
 
-.work ul {
+.work p {
+	margin: 5%;
+}
+
+.work .projects ul {
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
@@ -170,13 +211,13 @@ header nav ul li a:hover {
 	transition: 1s;
 }
 
-.work ul li {
+.work .projects ul li {
 	position: relative;
 	text-align: center;
 	margin-bottom: 5%;
 }
 
-.work ul li a img {
+.work .projects ul li a img {
 	width: 70%;
 	transition: .5s;
 	filter: grayscale(1);
@@ -184,21 +225,21 @@ header nav ul li a:hover {
 	border-radius: 10px;
 }
 
-.work ul li a img:hover {
+.work .projects ul li a img:hover {
 	filter: none;
 	cursor: pointer;
 }
 
-.work ul li div {
+.work .projects ul li div {
 	margin-bottom: 5%;
 }
 
 @media screen and (min-width: 768px) {
-	.work ul {
+	.work .projects ul {
 		flex-direction: row;
 		margin-top: 7%;
 	}
-	.work ul li {
+	.work .projects ul li {
 		width: 50%;
 	}
 }
@@ -207,16 +248,43 @@ header nav ul li a:hover {
 	text-align: center;
 }
 
-.about img {
+.about .about-nav {
+	background: rgba(97, 126, 229, 0.3);
+	text-decoration: underline;
+}
+
+.about h2 {
+	margin: 5%;
+}
+
+.about .jump-gif {
 	width: 50%;
+	opacity: .5;
+}
+
+.about ul li img {
+	width: 15%;
 }
 
 .resume {
 	text-align: center;
 }
 
+.resume .resume-nav {
+	background: rgba(97, 126, 229, 0.3);
+	text-decoration: underline;
+}
+
+.resume p {
+	margin: 5%;
+}
+
 .resume img {
 	width: 75%;
+}
+
+footer {
+	margin-top: 10%;
 }
 
 footer ul {
@@ -229,13 +297,12 @@ footer ul li {
 }
 
 footer ul li img {
-	width: 50%;
+	width: 70%;
 	transition: .5s;
 }
 
 footer ul li img:hover {
-	filter: invert(0.8);
-	transition: .5s;
+	filter: sepia() hue-rotate(200deg);
 }
 
 /*# sourceMappingURL=main.css.map */

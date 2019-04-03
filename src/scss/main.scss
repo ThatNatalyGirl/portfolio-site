@@ -86,10 +86,15 @@ header{
 //HOME PAGE
 
 .home{
+	.home-nav{
+		background: rgba(97, 126, 229, .3);
+		text-decoration: underline;
+	}
 	h2{
 		text-align: center;
 		font-size: 3em;
 		color: #617ee5;
+		margin: 5% 0;
 
 		.logo-inline{
 			width: .6em;
@@ -100,13 +105,36 @@ header{
 		justify-content: space-around;
 
 		li{
+			text-align: center;
+			
+			h3{
+				color: transparent;
+				transition: 1s;
+			}
+
 			.bubble-pic{
-				width: 60%;
+				width: 90%;
+				transition: .5s;
+			}
+			
+			.bubble-resume{
+				filter: sepia() hue-rotate(95deg);
 				transition: .5s;
 			}
 
-			.bubble1{
-				
+
+			&:hover{		
+				h3{
+					color: #617ee5;
+				}
+
+				.bubble-pic{
+					filter: grayscale(1);
+				}
+
+				.bubble-resume{
+					filter: none;
+				}
 			}
 		}
 	}
@@ -117,7 +145,7 @@ header{
 	
 			li{
 				.bubble-pic{
-					width: 40%;
+					width: 60%;
 				}
 	
 				.bubble1{
@@ -131,62 +159,77 @@ header{
 // WORK PAGE
 
 .work{
+	.work-nav{
+		background: rgba(97, 126, 229, .3);
+		text-decoration: underline;
+	}
+
 	.intro{
 		// margin-top: 10%;
 		text-align: center;
 	}
-	ul{
-		display: flex;
-		flex-direction: column;
-		flex-wrap: wrap;
-		justify-content: center;
-		align-items: center;
-		margin-top: 10%;
-		transition: 1s;
 
-		li{
-			position: relative;
-			text-align: center;
-			margin-bottom: 5%;
+	p{
+		margin: 5%;
+	}
 
-			a{
-				img{
-					width: 70%;
-					transition: .5s;
-					filter: grayscale(1);
-					transition: 1s;
-					border-radius: 10px;
+	.projects{
+		
+		ul{
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			margin-top: 10%;
+			transition: 1s;
 
-					&:hover{
-						filter: none;
-						cursor: pointer;
+			li{
+				position: relative;
+				text-align: center;
+				margin-bottom: 5%;
+
+				a{
+					img{
+						width: 70%;
+						transition: .5s;
+						filter: grayscale(1);
+						transition: 1s;
+						border-radius: 10px;
+
+						&:hover{
+							filter: none;
+							cursor: pointer;
+						}
 					}
 				}
-			}
 
-			div{
-				margin-bottom: 5%;
+				div{
+					margin-bottom: 5%;
+				}
 			}
 		}
-	}
+	}	
 }
 
 @media screen and (min-width: 768px){
 	.work{
-		ul{
-			flex-direction: row;
-			margin-top: 7%;
+		.projects{
+			ul{
+				flex-direction: row;
+				margin-top: 7%;
 
-			li{
-				width:50%;
+				li{
+					width:50%;
 
-				a{
-					img{
-						// width: 20%;
+					a{
+						img{
+							// width: 20%;
+						}
 					}
 				}
 			}
-		}
+		}	
 	}
 
 }
@@ -196,8 +239,26 @@ header{
 
 .about{
 	text-align: center;
-	img{
+	.about-nav{
+		background: rgba(97, 126, 229, .3);
+		text-decoration: underline;
+	}
+
+	h2{
+		margin: 5%;
+	}
+
+	.jump-gif{
 		width: 50%;
+		opacity: .5;
+	}
+
+	ul{
+		li{
+			img{
+				width: 15%;
+			}
+		}
 	}
 }
 
@@ -208,13 +269,23 @@ header{
 .resume{
 	text-align: center;
 	
+	.resume-nav{
+		background: rgba(97, 126, 229, .3);
+		text-decoration: underline;
+	}
+
+	p{
+		margin: 5%;
+	}
+	
 	img{
 		width: 75%;
 	}
 }
 
 footer{
-	
+	margin-top: 10%;
+
 	ul{
 		display: flex;
 		margin: 0 30%;
@@ -223,12 +294,12 @@ footer{
 			text-align: center;
 			
 			img{
-				width: 50%;
+				width: 70%;
 				transition: .5s;
 				
 				&:hover{
-					filter: invert(.8);
-					transition: .5s;
+					// filter: invert(.8);
+					filter: sepia() hue-rotate(200deg);  
 				}
 			}
 		}
