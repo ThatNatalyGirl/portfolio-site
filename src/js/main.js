@@ -1,21 +1,18 @@
-console.log(`Hire Me Please`)
+console.log(`I'm a cool cat I swear!`)
 
-let columns = document.querySelectorAll(".columns-sect div");
+let circles = document.querySelectorAll(".circle-pic");
 
-columns.forEach(function(column){
-		
-	column.addEventListener("mouseover", function() {  
-		if (column.style.width = "33.3333%") {
-			column.style.width = "70%";
-		}
+console.log(circles);
 
-		column.children[1].style.opacity = "1";
-		column.children[1].style.transition = ".25s";
-	})	
+let performersSpin = setInterval(function() {
+	for (let i = 0; i < circles.length; i++) {
+		const element = circles[i];
+		element.style.position = 'absolute',
+		element.style.left =  (Math.random()-.1)*100+'%',
+		element.style.top =  Math.random()*100-5+'%',
+		element.style.opacity = Math.random(), 
 
-	column.addEventListener("mouseout", function() {  
-		column.style.width = "33.3333%";
-		column.children[1].style.opacity = "0";
-	})	
+		console.log(element);
+	}
+}, 3000);
 
-});

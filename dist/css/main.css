@@ -105,7 +105,7 @@ header nav ul li a {
 	padding: 10%;
 	border-radius: 10%;
 	transition: .5s;
-	font-size: 1.3em;
+	font-size: 1.6em;
 }
 
 header nav ul li a:hover {
@@ -124,6 +124,9 @@ header nav ul li a:hover {
 	}
 	header nav {
 		width: 100%;
+	}
+	header nav ul li a {
+		font-size: 2em;
 	}
 }
 
@@ -195,10 +198,12 @@ header nav ul li a:hover {
 
 .work .intro {
 	text-align: center;
+	font-size: 1.3em;
+	margin: 5% 5% 15%;
 }
 
 .work p {
-	margin: 5%;
+	margin: 1% 5%;
 }
 
 .work .projects ul {
@@ -230,11 +235,18 @@ header nav ul li a:hover {
 	cursor: pointer;
 }
 
+.work .projects ul li h2 {
+	font-size: 2em;
+}
+
 .work .projects ul li div {
 	margin-bottom: 5%;
 }
 
 @media screen and (min-width: 768px) {
+	.work .intro {
+		font-size: 1.8em;
+	}
 	.work .projects ul {
 		flex-direction: row;
 		margin-top: 7%;
@@ -255,15 +267,26 @@ header nav ul li a:hover {
 
 .about h2 {
 	margin: 5%;
+	font-size: 1.3em;
 }
 
 .about .jump-gif {
 	width: 50%;
-	opacity: .5;
+	opacity: 1;
 }
 
 .about ul li img {
-	width: 15%;
+	width: 8%;
+	overflow: hidden;
+	z-index: -1;
+	transition: 1s;
+	opacity: 0;
+}
+
+@media screen and (min-width: 768px) {
+	.about h2 {
+		font-size: 1.8em;
+	}
 }
 
 .resume {
@@ -277,10 +300,17 @@ header nav ul li a:hover {
 
 .resume p {
 	margin: 5%;
+	font-size: 1.3em;
 }
 
 .resume img {
 	width: 75%;
+}
+
+@media screen and (min-width: 768px) {
+	.resume p {
+		font-size: 1.8em;
+	}
 }
 
 footer {

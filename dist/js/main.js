@@ -1,23 +1,15 @@
-"use strict";
+'use strict';
 
-console.log("Hire Me Please");
+console.log('I\'m a cool cat I swear!');
 
-var columns = document.querySelectorAll(".columns-sect div");
+var circles = document.querySelectorAll(".circle-pic");
 
-columns.forEach(function (column) {
+console.log(circles);
 
-	column.addEventListener("mouseover", function () {
-		if (column.style.width = "33.3333%") {
-			column.style.width = "70%";
-		}
-
-		column.children[1].style.opacity = "1";
-		column.children[1].style.transition = ".25s";
-	});
-
-	column.addEventListener("mouseout", function () {
-		column.style.width = "33.3333%";
-		column.children[1].style.opacity = "0";
-	});
-});
+var performersSpin = setInterval(function () {
+	for (var i = 0; i < circles.length; i++) {
+		var element = circles[i];
+		element.style.position = 'absolute', element.style.left = (Math.random() - .1) * 100 + '%', element.style.top = Math.random() * 100 - 5 + '%', element.style.opacity = Math.random(), console.log(element);
+	}
+}, 3000);
 //# sourceMappingURL=main.js.map
