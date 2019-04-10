@@ -9,7 +9,7 @@ let performersSpin = setInterval(function() {
 		const element = circles[i];
 		element.style.position = 'absolute',
 		element.style.left =  (Math.random()-.1)*100+'%',
-		element.style.top =  Math.random()*100-5+'%',
+		element.style.top =  Math.random()*100+20+'%',
 		element.style.opacity = Math.random(), 
 
 		console.log(element);
