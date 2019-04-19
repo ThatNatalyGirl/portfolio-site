@@ -1,0 +1,59 @@
+*********************************************
+					COMPUTED
+
+***We could do this inline html 
+
+Hello {{Title}}{{first}}{{ last}} 
+
+***or compute it with Vue
+
+let app = new Vue({
+	el: #app,
+	data: {
+		title: "Dr.",
+		first: "Nataly",
+		last: "Garzon"
+	},
+	computed: {
+		full: function(){
+			return this.title + " " + this.first + " " + this.last:
+		}
+	}
+})
+
+***then call
+	{{full}}
+
+
+*********************************************
+					WATCHER
+
+If x changes for any reason do this
+
+Ex. If the hashtag data changes for any reason, we can have that trigger a method
+
+watch: {
+	hashtag: function(){
+		console.log("OMG I changed")
+	}	
+}
+
+
+*********************************************
+Data down, events up
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

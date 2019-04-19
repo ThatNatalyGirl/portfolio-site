@@ -1,0 +1,286 @@
+
+/* 0. Reset ================================= */
+@import 'reset';
+
+$header-font: 'Rock Salt', cursive;
+$primary-font: 'Patrick Hand', cursive;
+
+/* 1. Main Layout ================================= */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: #fff;
+	width: 100%;
+	height: 100vh;
+}
+
+/* 2. Content ================================= */
+header{
+	display: flex;
+	font-family: $header-font;
+	width: 100%;
+	padding: 10px 2% 0%;
+
+	div{
+		width: 100%;
+		height: auto;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+		.logo{
+			background: url(../img/logo.png) top no-repeat;
+			background-size: 100%;
+			width: 12%;	
+			height: 0;
+			padding-bottom: 11%;
+			position: absolute;
+			filter: grayscale(0%);
+			transition: .5s;
+
+			&:hover{
+				cursor: pointer;
+				filter: grayscale(100%);
+			}
+		}
+
+		h1{
+			font-size: 5vw;
+			color: #02906c;
+			padding: 2% 5% 2% 25%;
+			text-shadow: 2px 2px 5px #000;
+		}
+	}
+
+	nav{
+		font-size: 2vw;
+		display: flex;
+		flex-direction: column;
+		text-align: right;
+		width: 30%;
+		line-height: 3vw;
+
+		a{
+			text-decoration: none;
+			color: #02906c;
+			transition: .25s;
+
+			&:hover{
+				color: #909582;
+			}
+		}
+	}
+}
+
+//************* Home Page *************
+.home{
+	.about{
+		margin: 15px 2%;
+		font-family: $primary-font;
+		font-size: 1.5em;
+		box-shadow: 0 5px 10px 0 #909582;
+		padding: 10px 1%;
+	}
+
+	.gaming{
+		background: url(../img/gamebg.jpg) top no-repeat;
+		background-size: 100%;
+		height: 0;
+		padding-bottom: 62%;
+		box-shadow: 0 5px 10px 0 #909582;
+		font-family: $primary-font;
+		display: flex;
+		justify-content: space-around;
+
+		a{
+			text-decoration: none;
+			color: #fff;
+			background: #02906c;
+			border: 3px solid #909582;
+			border-radius: 20px;
+			transition: .5s;
+			font-size: 4vw;
+			font-family: $header-font;
+			margin-top: 20%;
+			padding: 4% 2% 8%;
+
+			&:hover{
+				background: #000;
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+//************* Find a Game Page *************
+
+.find-a-game{
+	header{
+		margin-bottom: 30px;
+	}
+
+	.map-sect{
+		width: 100%;
+		height: 70vh; 
+
+		#map{
+			height: 100%;
+		}	
+	}
+
+}
+
+.location-marker{
+	font-family: $primary-font;
+
+	h2{
+		font-size: 1.9em;
+		text-align: center;
+	}
+
+	p{
+		font-size: 1.2em;
+
+		span{
+			font-weight: bold;
+			text-decoration: underline;
+		}
+	}
+
+	a{
+		text-decoration: none;
+		color: #fff;
+		background: #02906c;
+		border: 3px solid #909582;
+		border-radius: 20px;
+		transition: .5s;
+		font-size: 1em;
+		font-family: $header-font;
+		padding: 0 2%;
+
+		&:hover{
+			background: #000;
+			cursor: pointer;
+		}
+	}
+}
+
+.join-game-div{
+	background: #d8fff5;
+	width: 90%;
+	padding: 20px 2%;
+	margin: 20px 5%;
+	font-family: $primary-font;
+	border: 5px solid #909582;
+	border-radius: 10px;
+	position: absolute;
+	top: 20%;
+	transition: 1s;
+
+	@media screen and (min-width: 880px){
+		width: 50%;
+		margin: 20px 25%;
+		top: 30%;
+	}
+
+	.button-div{
+		text-align: center;
+		margin-top: 30px;
+
+		a{
+			text-decoration: none;
+			color: #fff;
+			background: #02906c;
+			border: 3px solid #909582;
+			border-radius: 20px;
+			transition: .5s;
+			font-size: 1em;
+			font-family: $header-font;
+			padding: 0 2%;
+			margin: 0 2%;
+
+			&:hover{
+				background: #000;
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+
+//************* Start a Game Page *************
+
+.start-game-form{
+
+	&::after{
+		content: "";
+		background: url(../img/dicebg.jpg) center no-repeat;
+		background-size: cover;
+		filter: brightness(70%);
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		position: absolute;
+		z-index: -1; 
+		height: 120%; 
+
+		@media screen and (min-width: 880px){
+			height: 165%; 
+		}
+	}
+
+	form{
+		margin: 5% 5%;
+		font-family: $primary-font;
+		font-size: 1.9em;
+		color: #fff;
+		text-shadow: 2px 2px 5px #000;
+
+		h2{
+			font-size: 1.7em;
+			margin-bottom: 4%;
+		}
+
+		div{
+			margin-bottom: 2%;
+
+			input{
+				border-radius: 5px;
+				font-size: .7em;
+				font-family: $primary-font;
+				width: 100%;
+
+				&::placeholder{
+					font-style: italic;
+					color: #ddd;
+				}
+			}
+
+			textarea{
+				border-radius: 5px;
+				font-size: .7em;
+				font-family: $primary-font;
+				width: 100%;
+				margin: 10px 0 0;
+			}	
+		}
+
+		.eventCreated{
+			color: #02906c;
+			font-family: $header-font;
+			border-radius: 5px;
+			font-size: .5em;
+
+			&:hover{
+				background: #02906c;
+				color: #fff;
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+

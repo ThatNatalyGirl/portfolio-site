@@ -1,0 +1,196 @@
+
+$primary-color: #f70c0c; //red
+$secondary-color: #0600ff; //blue
+$accent-color: #ffffff; //white
+
+$primary-font: "octin-college", sans-serif;
+$secondary-font: 'Source Code Pro', monospace;
+
+$tablet-bp: 768px;
+$desktop-bp: 960px;
+
+
+@mixin bp-tablet {
+	@media only screen and (min-width: $tablet-bp) {
+		@content;
+	}
+}
+
+@mixin bp-desktop {
+	@media only screen and (min-width: $desktop-bp) {
+		@content;
+	}
+}
+
+
+.wrapper-voting-page{
+	background-image: url(/dist/img/vote-now-bg.png);
+}
+
+	// ============Category Buttons====================
+.mobile-menu {
+	display: flex;
+	justify-content: center;
+	margin: 3%;
+
+	.menu-toggle {
+		background: $secondary-color;
+		width: 100%;
+		padding: 1%;
+		font-size: 25px;
+		font-family: $secondary-font;
+
+		p {
+			color: $accent-color;
+			float: right;
+			text-decoration: none;
+			transform: translateX(-30px) translateY(-7px) rotate(180deg);
+			font-size: 40px;
+			outline: none;
+		}
+	}
+}
+
+
+.menu-toggle {
+	transition: max-height .3s ease-out; 
+	max-height: 600px;
+	&.closed {
+		max-height: 50px;
+	}
+}
+.category-buttons {
+	ul {
+		margin-top: 10%;
+	}
+	li {
+
+		padding: 2%;
+		text-align: center;
+		// background: $secondary-color;
+
+		a {
+			padding-top: 20px;
+			text-decoration: none;
+			font-family: $secondary-font;
+			color: $primary-color;
+			border-bottom: 1px solid black;
+		}
+	}
+}
+
+
+	// ============ARTIST ICONS========================
+
+.artist-icons{
+	margin-top: 5%;
+	display: flex;
+	justify-content: center;
+	img {
+		flex-grow: 2;
+	}
+
+.closed {
+	display: none;
+}
+.artist-text-style{
+			
+		h2 {
+			margin-top: 2%;
+			font-family: $primary-font;
+			color: $primary-color;
+			width: 90%;
+			
+			
+		}
+
+		p {
+			font-family: $secondary-font;
+			color: $secondary-color;
+			width: 60%;
+			
+		}
+
+		a {
+			float: right;
+			padding: 10px;
+			margin-bottom: 10px;
+			font-family: $secondary-font;
+			text-decoration: none;
+			background: red;
+		}
+
+		&[disabled] {
+				background: green;
+		}
+	}	
+}
+
+
+// ==================TABLET================
+.mobile-menu {
+	@include bp-tablet {
+		display: block;
+	}
+}
+
+
+.category-buttons {
+	@include bp-tablet {
+		display: block;
+
+		ul {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+		li {
+				background: blue;
+			}
+
+			li:hover {
+				background: white;
+				filter: saturate(8);
+			}
+
+			li.active {
+				background: white;
+			}	
+
+			a {
+				border-bottom: none;
+			}
+		}
+	}
+}
+
+
+
+.artist-icons {
+	@include bp-tablet {
+		ul {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		}
+	}
+}
+
+
+
+
+// ==============DESKTOP==============
+.artist-icons {
+	@include bp-desktop {
+		margin: 3%;
+	}
+}
+
+
+
+
+
+
+
+
+

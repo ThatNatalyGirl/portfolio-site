@@ -1,0 +1,141 @@
+$primary-color: #f70c0c; //red
+$secondary-color: #0600ff; //blue
+
+@mixin bp-tablet {
+	@media only screen and (min-width: $tablet-bp) {
+		@content;
+	}
+}
+
+@mixin bp-desktop {
+	@media only screen and (min-width: $desktop-bp) {
+		@content;
+	}
+}
+
+.wrapper-new-artist-page {
+	background-image: url(/dist/img/vote-now-bg.png);
+}
+
+// =====MOBILE======
+
+.best-new-artist {
+	display: flex;
+	justify-content: center;
+	margin-top: 5%;
+
+	a:hover {
+		filter: sepia(100%);
+		transition: .3s;
+	}
+
+	img {
+		margin: 0 0 -5px 0px;
+	}
+
+	p {
+		font-family: $primary-font;
+		color: $accent-color;
+		background: $primary-color;
+		text-align: center;
+	}
+
+	h4 {
+		font-family: $secondary-font;
+		color: $accent-color;
+		text-align: center;
+		background: blue;
+		padding: 5%;
+		border-radius: 0px 0px 10px 10px;
+		margin-bottom: 10%;
+	}
+}
+
+
+
+
+// ======TABLET========
+.best-new-artist {
+	@include bp-tablet {
+		ul {
+			display: flex;
+			justify-content: space-around;
+			flex-wrap: wrap;
+		}
+	}
+}
+
+
+
+
+// =======DESKTOP=======
+.best-new-artist {
+	@include bp-desktop {
+		h4 {
+			display: none;
+		}
+
+		p {
+			color: #0600ff;	
+			background: none;
+			
+		}
+		.red-font {
+			color: $primary-color;
+		}
+
+	}
+}
+
+
+
+.category-buttons {
+	@include bp-desktop {
+		display: block;
+
+		ul {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+		li {
+				background: blue;
+			}
+
+			li:hover {
+				background: white;
+				filter: saturate(8);
+			}
+
+			li.active {
+				background: white;
+			}	
+
+			a {
+				border-bottom: none;
+			}
+		}
+	}
+}
+
+
+.best-new-artist {
+	@include bp-desktop {
+		display: flex;
+		.bazzi {
+		order: 1
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

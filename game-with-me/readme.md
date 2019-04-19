@@ -1,0 +1,2 @@
+Game With Me
+This is a project I did for my NodeJS class. I wanted to address the issues of finding people to play board games with, so I came up with this idea. I loved working on this project and having the theme be a passion of mine.

@@ -1,0 +1,78 @@
+/* 0. Reset ================================= */
+@import 'reset';
+
+/* 1. Main Layout ================================= */
+
+*{
+	box-sizing: border-box;
+}
+
+body{
+	background: #071e22;	
+	height: 100%;
+	width: 90%;
+	margin: 10px 5%;
+	font-family: 'Fahkwang', sans-serif;
+}
+
+/* 2. Content ================================= */
+
+h1{
+	font-size: 3em;
+	margin: 0 0 30px;
+	text-align: center;
+	color: #c15d87;
+}
+
+input[name="hashtag"]{
+	font-size: 3em;
+	width: 100%;
+	font-family: 'Fahkwang', sans-serif;
+	color: #c6e6e5;
+	background: #679289;
+	border: 4px solid #679289;
+}
+
+h3{
+	font-size: 1.9em;
+	color: #1d7874;
+}
+
+.showing{
+	color: #c15d87;
+	margin: 15px 0;
+}
+
+.tweets{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: space-between;
+	margin-top: 20px;
+	transition: 1s;
+
+	@media screen and (min-width: 800px){
+		flex-direction: row;
+		transition: 1s;
+	}
+
+	div{
+		flex: 1 1 0;
+		border:4px solid #679289;
+		margin: 5px 2%;
+		padding: 5px 1%;
+		border-radius: 4px;
+		color: #c6e6e5;
+		background: #c15d87;
+		line-height: 1.3em;
+		min-width: 25%;
+
+		@media screen and (min-width: 1100px){
+			min-width: 20%;
+		}
+	}
+}
+
+
+
