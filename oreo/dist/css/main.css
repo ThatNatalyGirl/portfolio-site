@@ -431,6 +431,8 @@ section {
 .videoSect .video a {
 	z-index: 1;
 	height: auto;
+	display: inline-block;
+	margin-top: 5%;
 }
 
 .videoSect .video a:hover {
@@ -440,7 +442,6 @@ section {
 .videoSect .video a img {
 	width: 25%;
 	height: auto;
-	margin-top: 4em;
 }
 
 .flavorSect {

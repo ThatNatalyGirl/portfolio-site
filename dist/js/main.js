@@ -1,10 +1,10 @@
 'use strict';
 
-console.log('I\'m a cool cat I swear!');
+console.log('I\'m a cool cat I swear! I guess you came here because you want to know more about me! Sheesh, so needy. Ok, I\'m a nerd most of the time, I love to eat all the food, I love my cats,fiance and friends, I like to cook, play board games, travel, the ushhhee, I\'m way to friendly but I\'d rather talk to your pet than you in reality. People describe me as outgoing, peppy, and honest. Pretty much I\'m not the worst :D');
 
 var circles = document.querySelectorAll(".circle-pic");
 
-console.log(circles);
+// console.log(circles);
 
 var performersSpin = setInterval(function () {
 	for (var i = 0; i < circles.length; i++) {
